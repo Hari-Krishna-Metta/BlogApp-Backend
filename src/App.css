@@ -1,0 +1,138 @@
+.skewed{
+  display: flex;
+}
+.skewed .bannertext{
+  height: 50vh;
+  width: 50%;
+  display: flex;
+  background-color:white;
+  align-items: center;
+  padding: 40px;
+}
+
+.skewed .bannerimage{
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.skewed .bannerimage::before{
+  content:'';
+  position: absolute;
+  left: -13.1em;
+  top:50%;
+  transform: translateY(-50%) rotate(20deg);
+  background: white;
+  width: 40%;
+  height: 140%;
+}
+
+
+.footer{
+  background: #880ED4;
+  color:white;
+}
+  .links ul {list-style-type: none;}
+  .links  li a{
+      text-decoration: none;
+      color: white;
+      font-size: 17px;
+      transition: color .2s;
+      &:hover{
+        text-decoration:none;
+        color:#4180CB;
+        }
+    }
+
+  .about-company i{font-size: 25px;}
+  .about-company  a{
+      color:white;
+      transition: color .2s;
+      &:hover{color:#ee4ef3}
+    }
+   
+  .location i{font-size: 18px;}
+  .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+  
+
+
+.blogitem .image-content{
+  position: relative;
+  /* border: 1px solid red; */
+  width:60%;
+  height: calc(100%) ;
+}
+.blogitem  .image{
+  position: relative;
+  height: 90%;
+  /* border: 1px solid red; */
+  width: 100%;
+  margin-top: -30px;
+  margin-left: 30px;
+  box-shadow: 0 0 7px rgb(59, 58, 58);
+}
+.blogitem  .image img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.blogitem .image-content .interactions{
+  height: calc(10% + 30px);
+  width: calc(100% + 30px);
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.blogitem .content{
+  width:calc(40% - 30px);
+  height: 100%;
+  margin-left: 30px;
+  padding: 20px;
+  padding-right: 20px;
+  overflow: hidden
+}
+
+
+
+@media screen and (max-width:1500px) {
+  .skewed{
+      display: block;
+      height: 40vh;
+  }
+
+  .skewed .bannerimage
+  {
+      display: none;
+  }
+  .skewed .bannertext{
+      width: 100%;
+      height: 100%;
+      border: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  .skewed .bannertext .text{
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+  .blogitem{
+      flex-direction: column;
+  }
+
+  .blogitem .image-content{
+      width: 100%;
+  }
+  .blogitem .image-content .image{
+      width: calc(100% - 60px);
+  }
+  .blogitem .content{
+      width: 100%;
+      padding:10px 30px;
+      margin: 0;
+      padding-bottom: 15px;
+  }
+}
