@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 function connectToMongo() {
-    mongoose.connect("mongodb://127.0.0.1:27017/BlogApp", {
+    mongoose.connect(""mongodb+srv://MettaHariKrishnaBhatlu:hari123@atlascluster.2lsyu6m.mongodb.net/BlogApp?retryWrites=true&w=majority&appName=AtlasCluster"", {
     useNewUrlParser:true,
     useUnifiedTopology:true
     })
